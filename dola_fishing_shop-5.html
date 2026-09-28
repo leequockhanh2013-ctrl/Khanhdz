@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOLA Fishing Shop</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#071a2b;color:#fff}
+header{padding:18px 7%;display:flex;justify-content:space-between;align-items:center;background:#09243a;position:sticky;top:0;z-index:5}
+.logo{font-size:24px;font-weight:800;color:#57d9ff}.logo span{color:#fff}
+nav a{color:#d8f4ff;text-decoration:none;margin-left:22px}
+.hero{padding:75px 7%;text-align:center;background:linear-gradient(180deg,#0b3552,#071a2b)}
+.badge{display:inline-block;padding:8px 14px;border-radius:20px;background:#123f5c;color:#62ddff;margin-bottom:18px}
+h1{font-size:44px;margin-bottom:14px}.hero p{color:#b9d7e6;max-width:650px;margin:auto;line-height:1.6}
+.btn{display:inline-block;margin-top:25px;padding:13px 22px;border-radius:10px;background:#16bce8;color:#04131f;text-decoration:none;font-weight:700}
+section{padding:55px 7%;max-width:1150px;margin:auto}
+h2{text-align:center;margin-bottom:30px;font-size:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:#0c2940;border:1px solid #164761;border-radius:16px;padding:22px}
+.card h3{margin:10px 0}.price{font-size:25px;font-weight:800;color:#57d9ff;margin:15px 0}
+.card p{color:#b9d7e6;line-height:1.5}.order{display:block;text-align:center;margin-top:18px;padding:11px;background:#123f5c;border-radius:9px;color:#fff;text-decoration:none}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{text-align:center;padding:25px;background:#0c2940;border-radius:15px}
+.notice{background:#102f42;border-left:4px solid #57d9ff;padding:18px;border-radius:8px;color:#c9e5ef;line-height:1.6}
+footer{text-align:center;padding:30px;background:#061522;color:#8eafbd}
+@media(max-width:650px){h1{font-size:34px}.steps{grid-template-columns:1fr}nav{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🎣 DOLA <span>FISHING SHOP</span></div>
+  <nav><a href="#dichvu">Dịch vụ</a><a href="#nap-tien">Nạp tiền</a><a href="#tao-tk">Tạo tài khoản</a><a href="#quytrinh">Quy trình</a><a href="#lienhe">Liên hệ</a></nav>
+</header>
+
+<div class="hero">
+  <div class="badge">ROBLOX • CÂU CÁ HẠNG NẶNG</div>
+  <h1>🎣 DOLA Fishing Shop</h1>
+  <p>Dịch vụ hỗ trợ cày game Câu Cá Hạng Nặng trên Roblox. Chọn gói phù hợp, gửi yêu cầu và theo dõi đơn hàng dễ dàng.</p>
+  <a class="btn" href="#dichvu">Xem dịch vụ</a>
+</div>
+
+<section id="dichvu">
+<h2>🎯 Dịch vụ</h2>
+<div class="grid">
+  <div class="card"><div>🐟</div><h3>Cày cá / vật phẩm</h3><p>Hỗ trợ hoàn thành mục tiêu cá hoặc vật phẩm theo yêu cầu.</p><div class="price">Từ 20.000đ</div><a class="order" href="#lienhe">Đặt đơn</a></div>
+  <div class="card"><div>💰</div><h3>Cày tiền</h3><p>Hỗ trợ đạt mốc tiền trong game theo gói bạn chọn.</p><div class="price">Từ 15.000đ</div><a class="order" href="#lienhe">Đặt đơn</a></div>
+  <div class="card"><div>⭐</div><h3>Cày cấp</h3><p>Hỗ trợ tăng cấp theo mục tiêu và thời gian thỏa thuận.</p><div class="price">Từ 25.000đ</div><a class="order" href="#lienhe">Đặt đơn</a></div>
+  <div class="card"><div>🏆</div><h3>Nhiệm vụ / thành tựu</h3><p>Nhận hỗ trợ hoàn thành các mục tiêu cụ thể trong game.</p><div class="price">Từ 20.000đ</div><a class="order" href="#lienhe">Đặt đơn</a></div>
+</div>
+</section>
+
+
+<section id="nap-tien">
+<h2>💳 Nạp tiền</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Chọn số tiền</h3>
+    <p>Nhập số tiền muốn nạp vào số dư shop.</p>
+    <input id="amount" type="number" min="10000" step="10000" placeholder="Ví dụ: 50000"
+      style="width:100%;padding:12px;border-radius:9px;border:1px solid #31566a;background:#071a2b;color:#fff;margin-top:14px">
+    <button class="btn" style="border:0;cursor:pointer;width:100%" onclick="topup()">Nạp tiền</button>
+    <p id="topupMsg" style="margin-top:12px;color:#57d9ff"></p>
+  </div>
+  <div class="card">
+    <h3>🏦 Phương thức thanh toán</h3>
+    <p>• Chuyển khoản ngân hàng</p>
+    <p>• Ví điện tử</p>
+    <p style="margin-top:12px">Khi triển khai thật, hãy thay bằng thông tin thanh toán của shop.</p>
+  </div>
+</div>
+</section>
+
+<section id="tao-tk">
+<h2>👤 Tạo tài khoản</h2>
+<div class="card" style="max-width:600px;margin:auto">
+  <input id="regName" type="text" placeholder="Tên tài khoản"
+    style="width:100%;padding:12px;margin-bottom:12px;border-radius:9px;border:1px solid #31566a;background:#071a2b;color:#fff">
+  <input id="regEmail" type="email" placeholder="Email"
+    style="width:100%;padding:12px;margin-bottom:12px;border-radius:9px;border:1px solid #31566a;background:#071a2b;color:#fff">
+  <input id="regPass" type="password" placeholder="Mật khẩu"
+    style="width:100%;padding:12px;border-radius:9px;border:1px solid #31566a;background:#071a2b;color:#fff">
+  <button class="btn" style="border:0;cursor:pointer;width:100%" onclick="register()">Tạo tài khoản</button>
+  <p id="regMsg" style="margin-top:12px;color:#57d9ff"></p>
+</div>
+</section>
+
+<section id="quytrinh">
+<h2>⚡ Quy trình đặt đơn</h2>
+<div class="steps">
+  <div class="step"><div style="font-size:35px">1️⃣</div><h3>Chọn gói</h3><p>Chọn dịch vụ và mục tiêu cần cày.</p></div>
+  <div class="step"><div style="font-size:35px">2️⃣</div><h3>Gửi yêu cầu</h3><p>Liên hệ shop để xác nhận đơn và giá.</p></div>
+  <div class="step"><div style="font-size:35px">3️⃣</div><h3>Nhận kết quả</h3><p>Kiểm tra kết quả và hoàn tất đơn.</p></div>
+</div>
+</section>
+
+<section>
+<div class="notice">🔒 <b>An toàn:</b> Không gửi mật khẩu tài khoản cho người khác. Ưu tiên phương thức hỗ trợ không cần chia sẻ thông tin đăng nhập và tuân thủ quy định của Roblox cũng như game.</div>
+</section>
+
+<section id="lienhe">
+<h2>📩 Liên hệ</h2>
+<div class="card" style="max-width:600px;margin:auto;text-align:center">
+<p>Discord: <b>Thêm Discord của bạn</b></p>
+<p style="margin-top:10px">Facebook: <b>Thêm Facebook của bạn</b></p>
+<a class="btn" href="javascript:alert('Hãy thay thông tin liên hệ trong mã HTML trước khi đăng website.')">Đặt đơn ngay</a>
+</div>
+</section>
+
+<footer>© 2026 DOLA Fishing Shop • Roblox</footer>
+
+<script>
+function topup(){
+  const a = Number(document.getElementById('amount').value);
+  const msg = document.getElementById('topupMsg');
+  if(!a || a < 10000){ msg.textContent='Vui lòng nhập số tiền từ 10.000đ.'; return; }
+  msg.textContent='Đã tạo yêu cầu nạp '+a.toLocaleString('vi-VN')+'đ. (Bản demo)';
+}
+function register(){
+  const n=document.getElementById('regName').value.trim();
+  const e=document.getElementById('regEmail').value.trim();
+  const pw=document.getElementById('regPass').value;
+  const msg=document.getElementById('regMsg');
+  if(!n || !e || !pw){msg.textContent='Vui lòng điền đầy đủ thông tin.';return;}
+  msg.textContent='Tạo tài khoản thành công! (Bản demo)';
+}
+</script>
+
+</body>
+</html>
